@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Whitestone Taylored Functions</title>
-  <!-- Google Fonts: Poppins (as referenced by the new CSS) -->
+  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -14,33 +14,35 @@
   <!-- =========================
        Navbar
        ========================= -->
-<!-- Navbar -->
-<header class="bg-[#f4f1e9] fixed w-full z-50 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="/index.html"
-       class="inline-flex items-center justify-center w-12 h-12 border-2 border-cyan-700 rounded-full text-cyan-700 text-xl font-extrabold transition hover:bg-cyan-700 hover:text-white">
-      WTF
-    </a>
+  <header class="navbar">
+    <div class="container flex-between">
+      <!-- Logo -->
+      <a href="/index.html" class="logo">WTF</a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
-      <a href="/pages/overview.html" class="transition hover:text-cyan-700">Overview</a>
-      <a href="/pages/services.html" class="transition hover:text-cyan-700">Services</a>
-      <a href="/pages/contact.html" class="transition hover:text-cyan-700">Contact</a>
-    </nav>
+      <!-- Desktop Navigation -->
+      <nav>
+        <a href="/pages/overview.html" class="active">Overview</a>
+        <a href="/pages/services.html">Services</a>
+        <a href="/pages/contact.html">Contact</a>
+      </nav>
 
-    <!-- Mobile Toggle (optional, if JS added) -->
-    <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-cyan-700 hover:bg-cyan-100 focus:outline-none focus:ring-2 focus:ring-cyan-500" aria-label="Toggle navigation">
-      <!-- Icon: Menu -->
-      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-</header>
+      <!-- Mobile Toggle (JS required to toggle .mobile-nav) -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <!-- Simple Hamburger Icon -->
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
+    <!-- Mobile Navigation Menu (hidden by default) -->
+    <div class="mobile-nav">
+      <a href="/pages/overview.html">Overview</a>
+      <a href="/pages/services.html">Services</a>
+      <a href="/pages/contact.html">Contact</a>
+    </div>
+  </header>
 
   <!-- =========================
        Hero Section
@@ -74,20 +76,66 @@
           <div class="icon">📸</div>
           <h3>Media Production</h3>
           <p>Professional photography and film solutions tailored for emotional storytelling and visual impact.</p>
-          <a href="pages/media-production.html" class="btn btn-secondary">Learn More →</a>
+          <a href="pages/media-production.html" class="primary-link">Learn More →</a>
         </div>
         <div class="card">
           <div class="icon">🏞️</div>
           <h3>Venue Curation</h3>
           <p>Access breathtaking Utah venues—from desert vistas to elegant halls—ready to host unforgettable events.</p>
-          <a href="pages/venue-curation.html" class="btn btn-secondary">Explore Venues →</a>
+          <a href="pages/venue-curation.html" class="primary-link">Explore Venues →</a>
         </div>
         <div class="card">
           <div class="icon">🎟️</div>
           <h3>Event Design</h3>
           <p>We manage every detail: sound, lights, guests, flow—creating immersive, worry-free experiences.</p>
-          <a href="pages/event-design.html" class="btn btn-secondary">Discover More →</a>
+          <a href="pages/event-design.html" class="primary-link">Discover More →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       Gallery Section
+       ========================= -->
+  <section class="gallery">
+    <div class="container">
+      <h2>📸 Featured Events</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="/images/event1.jpg" alt="Summer Gala 2024" />
+          <div class="overlay">Summer Gala 2024</div>
+        </div>
+        <div class="item">
+          <img src="/images/event2.jpg" alt="Corporate Mixer" />
+          <div class="overlay">Corporate Mixer</div>
+        </div>
+        <div class="item">
+          <img src="/images/event3.jpg" alt="Luxury Wedding" />
+          <div class="overlay">Luxury Wedding</div>
+        </div>
+        <!-- Add more .item blocks as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       Testimonials Section
+       ========================= -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>🗣 Testimonials</h2>
+      <div class="grid">
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p>“Eventoria made our wedding day absolutely perfect. Their attention to detail was unmatched.”</p>
+          <div class="author">— Sarah &amp; Michael</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote-icon">“</div>
+          <p>“Our company holiday party was a huge success! The team handled everything, and the venue looked amazing.”</p>
+          <div class="author">— James L., CEO of TechNova</div>
+        </div>
+        <!-- Add more .testimonial-card as needed -->
       </div>
     </div>
   </section>
@@ -120,7 +168,7 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
     </div>
@@ -130,12 +178,10 @@
        Footer
        ========================= -->
   <footer class="footer">
-    <div class="container flex-between">
-      <div class="text-sm">
-        &copy; 2025 Whitestone Taylored Functions. All rights reserved.
-      </div>
+    <div class="container">
+      <p>&copy; 2025 Whitestone Taylored Functions. All rights reserved.</p>
       <div class="flex-center">
-        <a href="https://www.instagram.com/tayloredfunctions/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="icon-link">
+        <a href="https://www.instagram.com/tayloredfunctions/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <!-- Instagram SVG -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <title>Instagram icon</title>
@@ -143,15 +189,15 @@
           </svg>
         </a>
 
-        <a href="https://x.com/johnson_ma3055" aria-label="X" target="_blank" rel="noopener noreferrer" class="icon-link">
-          <!-- X (Twitter) SVG -->
+        <a href="https://x.com/johnson_ma3055" aria-label="X" target="_blank" rel="noopener noreferrer">
+          <!-- X SVG -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <title>X icon</title>
             <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.6a9.06 9.06 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.6 0c-2.5 0-4.52 2.03-4.52 4.54 0 .36.04.7.1 1.03A12.85 12.85 0 0 1 1.64.89a4.5 4.5 0 0 0-.61 2.28c0 1.57.8 2.95 2 3.77A4.51 4.51 0 0 1 .9 6.1v.06c0 2.2 1.55 4.04 3.6 4.46a4.5 4.5 0 0 1-2.04.08 4.53 4.53 0 0 0 4.23 3.13A9.06 9.06 0 0 1 0 19.54a12.77 12.77 0 0 0 6.92 2.02c8.3 0 12.85-6.88 12.85-12.84 0-.2 0-.39-.02-.58A9.22 9.22 0 0 0 23 3z"/>
           </svg>
         </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61575761515797" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="icon-link">
+        <a href="https://www.facebook.com/profile.php?id=61575761515797" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
           <!-- Facebook SVG -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <title>Facebook icon</title>
@@ -168,8 +214,10 @@
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.navbar nav');
+    const mobileNav = document.querySelector('.mobile-nav');
+
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
+      mobileNav.classList.toggle('open');
     });
   </script>
 </body>
