@@ -1,17 +1,17 @@
-/* ==============================================
-   Luxe Gold & Black Event-Host Theme (styles.css)
-   ============================================== */
+/* ===================================================
+   Luxe Gold & Black Event-Host Theme — Refined v2
+   =================================================== */
 
 /* 1. Theme Variables */
 :root {
   /* Core Colors */
-  --color-black:        #0a0a0a;   /* Rich matte black */
+  --color-black:        #0a0a0a;   /* Deep matte black */
   --color-white:        #ffffff;   /* Crisp white */
   --color-gray-dark:    #1f1f1f;   /* Dark accents / backgrounds */
   --color-gray-light:   #2c2c2c;   /* Secondary backgrounds */
-  --color-gold:         #D4AF37;   /* Primary luxury accent */
-  --color-gold-dark:    #b38a2c;   /* Darker gold for hovers */
-  --color-accent-light: #f2e8c9;   /* Very light gold for highlights */
+  --color-gold:         #BFA055;   /* Warm, muted luxury gold */
+  --color-gold-dark:    #9e8a42;   /* Darker gold for hover states */
+  --color-accent-light: #f2e8c9;   /* Very pale gold for text highlights */
 
   /* Typography */
   --font-primary:       'Poppins', sans-serif;
@@ -21,6 +21,7 @@
   --font-scale-xl:      1.5rem;     /* 24px */
   --font-scale-2xl:     2rem;       /* 32px */
   --font-scale-3xl:     2.5rem;     /* 40px */
+  --font-scale-4xl:     3rem;       /* 48px */
 
   /* Spacing */
   --space-xxs:          0.25rem;    /* 4px */
@@ -110,13 +111,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.75rem; /* 28px mobile */
+  font-size: 2rem; /* 32px on mobile */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 h2 {
-  font-size: 1.5rem;  /* 24px */
+  font-size: 1.75rem; /* 28px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 h3 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.5rem; /* 24px */
 }
 p {
   font-size: var(--font-base);
@@ -126,9 +131,9 @@ p {
 
 /* Responsive Typography Scaling */
 @media (min-width: 640px) {
-  h1 { font-size: var(--font-scale-2xl); } /* 32px */
-  h2 { font-size: var(--font-scale-xl); }   /* 24px */
-  h3 { font-size: var(--font-scale-lg); }   /* 18px */
+  h1 { font-size: var(--font-scale-4xl); } /* 48px */
+  h2 { font-size: var(--font-scale-3xl); } /* 40px */
+  h3 { font-size: var(--font-scale-2xl); } /* 32px */
   p  { font-size: var(--font-scale-sm); }   /* 14px */
 }
 
@@ -209,17 +214,17 @@ a.primary-link:hover::after {
 }
 
 .navbar .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;        /* 32px */
   font-weight: 700;
   color: var(--color-gold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   transition: color 0.2s;
 }
 .navbar .logo:hover {
   color: var(--color-gold-dark);
 }
 
+/* Hide nav on mobile, show toggle */
 .navbar nav {
   display: none;
 }
@@ -229,7 +234,7 @@ a.primary-link:hover::after {
   background: none;
   border: none;
   color: var(--color-gold);
-  font-size: 1.5rem;
+  font-size: 1.75rem; /** 28px **/
   cursor: pointer;
 }
 
@@ -242,11 +247,12 @@ a.primary-link:hover::after {
     display: none;
   }
   .navbar nav a {
-    color: var(--color-gray-light);
+    color: var(--color-white);
     font-weight: 500;
-    position: relative;
     padding: var(--space-xxs) 0;
     transition: color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   .navbar nav a:hover {
     color: var(--color-gold);
@@ -265,7 +271,7 @@ a.primary-link:hover::after {
   }
 }
 
-/* Optional Mobile Menu (hidden by default) */
+/* Mobile Menu (hidden by default) */
 .mobile-nav {
   display: none;
   background: var(--color-gray-dark);
@@ -279,6 +285,8 @@ a.primary-link:hover::after {
   color: var(--color-white);
   font-weight: 500;
   border-bottom: 1px solid var(--color-gray-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .mobile-nav a:hover {
   background: var(--color-gray-light);
@@ -296,7 +304,7 @@ a.primary-link:hover::after {
   align-items: center;
   text-align: center;
   padding: var(--space-2xl) var(--space-md);
-  background: url('/images/hero-luxury.jpg') center/cover no-repeat; /* Replace with your high-res hero image */
+  background: url('/images/hero-luxury.jpg') center/cover no-repeat;
   color: var(--color-white);
 }
 .hero::before {
@@ -311,10 +319,8 @@ a.primary-link:hover::after {
   max-width: 800px;
 }
 .hero h1 {
-  font-size: var(--font-scale-3xl);
+  font-size: var(--font-scale-4xl);
   margin-bottom: var(--space-md);
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 .hero p {
   font-size: var(--font-scale-lg);
@@ -337,7 +343,8 @@ a.primary-link:hover::after {
   text-align: center;
   margin-bottom: var(--space-xl);
   color: var(--color-white);
-  font-size: var(--font-scale-2xl);
+  font-size: var(--font-scale-3xl);
+  letter-spacing: 1px;
 }
 .services p {
   text-align: center;
@@ -366,7 +373,7 @@ a.primary-link:hover::after {
 
 .services .card {
   background: var(--color-black);
-  border: 1px solid var(--color-gray-medium);
+  border: 1px solid var(--color-gray-light);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   box-shadow: var(--shadow-light);
@@ -382,9 +389,10 @@ a.primary-link:hover::after {
   margin-bottom: var(--space-xs);
 }
 .services .card h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--color-white);
   margin-bottom: var(--space-xs);
+  letter-spacing: 1px;
 }
 .services .card p {
   color: var(--color-gray-light);
@@ -410,7 +418,8 @@ a.primary-link:hover::after {
   text-align: center;
   margin-bottom: var(--space-xl);
   color: var(--color-white);
-  font-size: var(--font-scale-2xl);
+  font-size: var(--font-scale-3xl);
+  letter-spacing: 1px;
 }
 .gallery .grid {
   display: grid;
@@ -439,17 +448,17 @@ a.primary-link:hover::after {
 .gallery .item img {
   display: block;
   width: 100%;
-  height: 250px;
+  height: 280px;
   object-fit: cover;
   transition: transform 0.2s;
 }
 .gallery .item:hover img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 .gallery .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -473,7 +482,8 @@ a.primary-link:hover::after {
   text-align: center;
   margin-bottom: var(--space-xl);
   color: var(--color-white);
-  font-size: var(--font-scale-2xl);
+  font-size: var(--font-scale-3xl);
+  letter-spacing: 1px;
 }
 .testimonials .grid {
   display: grid;
@@ -526,7 +536,7 @@ a.primary-link:hover::after {
   text-align: center;
 }
 .cta-banner h2 {
-  font-size: var(--font-scale-2xl);
+  font-size: var(--font-scale-3xl);
   margin-bottom: var(--space-md);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -534,6 +544,7 @@ a.primary-link:hover::after {
 .cta-banner p {
   margin-bottom: var(--space-lg);
   color: var(--color-black);
+  font-size: var(--font-scale-lg);
 }
 .cta-banner .btn {
   margin-top: var(--space-sm);
@@ -556,7 +567,8 @@ a.primary-link:hover::after {
   text-align: center;
   margin-bottom: var(--space-xl);
   color: var(--color-white);
-  font-size: var(--font-scale-2xl);
+  font-size: var(--font-scale-3xl);
+  letter-spacing: 1px;
 }
 .contact .form-container {
   max-width: 600px;
@@ -695,4 +707,4 @@ a.primary-link:hover::after {
   color: var(--color-gold-dark);
 }
 
-/* End of Luxe Gold & Black Event-Host Theme */
+/* End of Luxe Gold & Black Event-Host Theme (Refined v2) */
