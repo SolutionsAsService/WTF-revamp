@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whitestone Taylored Functions</title>
+  <!-- Google Fonts: Poppins (as referenced by the new CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- =========================
+       Navbar
+       ========================= -->
+  <header class="navbar container flex-between">
+    <a href="index.html" class="logo">WTF</a>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav>
+      <a href="#what-we-do" class="active">What We Do</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Hero Section
+       ========================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Whitestone Taylored Functions</h1>
+      <p>Transforming Utah’s unique venues into unforgettable experiences with seamless event production and cinematic storytelling.</p>
+      <a href="#services" class="btn btn-primary">Explore Our Services</a>
+      <a href="#contact" class="btn btn-secondary">Let’s Talk</a>
+    </div>
+  </section>
+
+  <!-- =========================
+       What We Do (Intro)
+       ========================= -->
+  <section id="what-we-do" class="services">
+    <div class="container">
+      <h2>🎥 What We Do</h2>
+      <p>We specialize in all-in-one event coordination and cinematic media production—serving weddings, corporate gatherings, concerts, and creative ventures with modern tools and local expertise.</p>
+    </div>
+  </section>
+
+  <!-- =========================
+       Services Grid
+       ========================= -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">📸</div>
+          <h3>Media Production</h3>
+          <p>Professional photography and film solutions tailored for emotional storytelling and visual impact.</p>
+          <a href="pages/media-production.html" class="btn btn-secondary">Learn More →</a>
+        </div>
+        <div class="card">
+          <div class="icon">🏞️</div>
+          <h3>Venue Curation</h3>
+          <p>Access breathtaking Utah venues—from desert vistas to elegant halls—ready to host unforgettable events.</p>
+          <a href="pages/venue-curation.html" class="btn btn-secondary">Explore Venues →</a>
+        </div>
+        <div class="card">
+          <div class="icon">🎟️</div>
+          <h3>Event Design</h3>
+          <p>We manage every detail: sound, lights, guests, flow—creating immersive, worry-free experiences.</p>
+          <a href="pages/event-design.html" class="btn btn-secondary">Discover More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       Call-to-Action Banner
+       ========================= -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>💡 Ready to Create?</h2>
+      <p>Whether you're planning a wedding, launching a brand, or filming a passion project—we're here to make it unforgettable.</p>
+      <a href="#contact" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- =========================
+       Contact Section
+       ========================= -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="form-container">
+        <form action="/send-inquiry" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+  <footer class="footer">
+    <div class="container flex-between">
+      <div class="text-sm">
+        &copy; 2025 Whitestone Taylored Functions. All rights reserved.
+      </div>
+      <div class="flex-center">
+        <a href="https://www.instagram.com/tayloredfunctions/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="icon-link">
+          <!-- Instagram SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <title>Instagram icon</title>
+            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+          </svg>
+        </a>
+
+        <a href="https://x.com/johnson_ma3055" aria-label="X" target="_blank" rel="noopener noreferrer" class="icon-link">
+          <!-- X (Twitter) SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <title>X icon</title>
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.6a9.06 9.06 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.6 0c-2.5 0-4.52 2.03-4.52 4.54 0 .36.04.7.1 1.03A12.85 12.85 0 0 1 1.64.89a4.5 4.5 0 0 0-.61 2.28c0 1.57.8 2.95 2 3.77A4.51 4.51 0 0 1 .9 6.1v.06c0 2.2 1.55 4.04 3.6 4.46a4.5 4.5 0 0 1-2.04.08 4.53 4.53 0 0 0 4.23 3.13A9.06 9.06 0 0 1 0 19.54a12.77 12.77 0 0 0 6.92 2.02c8.3 0 12.85-6.88 12.85-12.84 0-.2 0-.39-.02-.58A9.22 9.22 0 0 0 23 3z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61575761515797" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="icon-link">
+          <!-- Facebook SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <title>Facebook icon</title>
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82V14.708h-3.13v-3.62h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.588l-.467 3.62h-3.121V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================
+       Mobile Menu Toggle Script
+       ========================= -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navbar nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
