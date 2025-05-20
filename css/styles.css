@@ -1,46 +1,48 @@
-/* ===============================
-   Aero Luxe Event-Host Theme (styles.css)
-   Minimal, Refined, Vercel-inspired
-   =============================== */
+/* ==============================================
+   Luxe Gold & Black Event-Host Theme (styles.css)
+   ============================================== */
 
 /* 1. Theme Variables */
 :root {
-  /* Colors */
-  --color-white:       #ffffff;      /* Page background */
-  --color-black:       #111111;      /* Primary text */
-  --color-gray-light:  #f7f7f7;      /* Section backgrounds */
-  --color-gray-medium: #e5e7eb;      /* Card borders, subtle divisions */
-  --color-gray-dark:   #666666;      /* Secondary text */
-  --color-gold:        #D4AF37;      /* Accent / Buttons */
-  --color-accent:      #000000;      /* Link hovers, icons */
+  /* Core Colors */
+  --color-black:        #0a0a0a;   /* Rich matte black */
+  --color-white:        #ffffff;   /* Crisp white */
+  --color-gray-dark:    #1f1f1f;   /* Dark accents / backgrounds */
+  --color-gray-light:   #2c2c2c;   /* Secondary backgrounds */
+  --color-gold:         #D4AF37;   /* Primary luxury accent */
+  --color-gold-dark:    #b38a2c;   /* Darker gold for hovers */
+  --color-accent-light: #f2e8c9;   /* Very light gold for highlights */
 
   /* Typography */
-  --font-primary:      'Inter', sans-serif;
-  --font-base:         1rem;         /* 16px */
-  --font-scale-sm:     0.875rem;     /* 14px */
-  --font-scale-lg:     1.125rem;     /* 18px */
-  --font-scale-xl:     1.5rem;       /* 24px */
-  --font-scale-2xl:    2rem;         /* 32px */
-  --font-scale-3xl:    2.5rem;       /* 40px */
+  --font-primary:       'Poppins', sans-serif;
+  --font-base:          1rem;       /* 16px */
+  --font-scale-sm:      0.875rem;   /* 14px */
+  --font-scale-lg:      1.125rem;   /* 18px */
+  --font-scale-xl:      1.5rem;     /* 24px */
+  --font-scale-2xl:     2rem;       /* 32px */
+  --font-scale-3xl:     2.5rem;     /* 40px */
 
   /* Spacing */
-  --space-xs:          0.25rem;      /* 4px */
-  --space-sm:          0.5rem;       /* 8px */
-  --space-md:          1rem;         /* 16px */
-  --space-lg:          1.5rem;       /* 24px */
-  --space-xl:          2rem;         /* 32px */
-  --space-2xl:         3rem;         /* 48px */
+  --space-xxs:          0.25rem;    /* 4px */
+  --space-xs:           0.5rem;     /* 8px */
+  --space-sm:           1rem;       /* 16px */
+  --space-md:           1.5rem;     /* 24px */
+  --space-lg:           2rem;       /* 32px */
+  --space-xl:           3rem;       /* 48px */
+  --space-2xl:          4rem;       /* 64px */
 
-  /* Borders & Radius */
-  --radius-sm:         0.25rem;      /* 4px */
-  --radius-md:         0.5rem;       /* 8px */
+  /* Border Radius */
+  --radius-sm:          0.25rem;    /* 4px */
+  --radius-md:          0.5rem;     /* 8px */
+  --radius-lg:          1rem;       /* 16px */
 
   /* Shadows */
-  --shadow-light:      0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-medium:     0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-light:       0 2px 6px rgba(0, 0, 0, 0.2);
+  --shadow-medium:      0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-heavy:       0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* 2. Global Reset & Base */
+/* 2. Global Reset & Base Styles */
 *,
 *::before,
 *::after {
@@ -58,8 +60,8 @@ body {
   font-family: var(--font-primary);
   font-size: var(--font-base);
   line-height: 1.6;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,48 +73,89 @@ img {
   border-radius: var(--radius-md);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
 /* Screen-reader only helper */
 .sr-only {
   position: absolute;
-  width: 1px; 
+  width: 1px;
   height: 1px;
-  padding: 0; 
-  margin: -1px; 
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
 
-/* 3. Headings & Typography */
+/* 3. Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-black);
+  color: var(--color-white);
   letter-spacing: 0.5px;
   line-height: 1.2;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 h1 {
-  font-size: 1.75rem; /* ~28px on mobile */
+  font-size: 1.75rem; /* 28px mobile */
 }
 h2 {
-  font-size: 1.5rem;  /* ~24px */
+  font-size: 1.5rem;  /* 24px */
 }
 h3 {
-  font-size: 1.25rem; /* ~20px */
+  font-size: 1.25rem; /* 20px */
 }
-
 p {
   font-size: var(--font-base);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
   margin-bottom: var(--space-md);
 }
 
-/* Scale up on medium+ screens */
+/* Responsive Typography Scaling */
 @media (min-width: 640px) {
   h1 { font-size: var(--font-scale-2xl); } /* 32px */
-  h2 { font-size: var(--font-scale-xl); }  /* 24px */
-  h3 { font-size: var(--font-scale-lg); }  /* 18px */
-  p  { font-size: var(--font-scale-sm); }  /* 14px */
+  h2 { font-size: var(--font-scale-xl); }   /* 24px */
+  h3 { font-size: var(--font-scale-lg); }   /* 18px */
+  p  { font-size: var(--font-scale-sm); }   /* 14px */
+}
+
+/* Link Styles */
+a.primary-link {
+  color: var(--color-gold);
+  position: relative;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+a.primary-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+a.primary-link:hover {
+  color: var(--color-gold-dark);
+}
+a.primary-link:hover::after {
+  transform: scaleX(1);
 }
 
 /* 4. Layout Utilities */
@@ -151,29 +194,41 @@ p {
 /* 5. Navbar */
 .navbar {
   width: 100%;
-  background: var(--color-white);
+  background: var(--color-black);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--color-gray-medium);
-  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-gray-light);
+  padding: var(--space-xs) var(--space-md);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar .logo {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-black);
-  text-decoration: none;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.navbar .logo:hover {
+  color: var(--color-gold-dark);
 }
 
 .navbar nav {
-  display: none; /* hidden on mobile */
+  display: none;
 }
 
 .navbar .menu-toggle {
+  display: block;
   background: none;
   border: none;
-  color: var(--color-black);
+  color: var(--color-gold);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -187,26 +242,47 @@ p {
     display: none;
   }
   .navbar nav a {
-    text-decoration: none;
-    color: var(--color-gray-dark);
+    color: var(--color-gray-light);
     font-weight: 500;
     position: relative;
-    padding-bottom: var(--space-xs);
-    transition: color 0.15s;
+    padding: var(--space-xxs) 0;
+    transition: color 0.2s;
   }
   .navbar nav a:hover {
-    color: var(--color-accent);
+    color: var(--color-gold);
+  }
+  .navbar nav a.active {
+    color: var(--color-gold);
   }
   .navbar nav a.active::after {
     content: '';
-    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--color-accent);
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    background: var(--color-gold);
   }
+}
+
+/* Optional Mobile Menu (hidden by default) */
+.mobile-nav {
+  display: none;
+  background: var(--color-gray-dark);
+}
+.mobile-nav.open {
+  display: block;
+}
+.mobile-nav a {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-white);
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+.mobile-nav a:hover {
+  background: var(--color-gray-light);
+  color: var(--color-black);
 }
 
 /* 6. Hero Section */
@@ -220,83 +296,63 @@ p {
   align-items: center;
   text-align: center;
   padding: var(--space-2xl) var(--space-md);
-  background-color: var(--color-gray-light);
+  background: url('/images/hero-luxury.jpg') center/cover no-repeat; /* Replace with your high-res hero image */
+  color: var(--color-white);
 }
-
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.6);
+}
 .hero-content {
-  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
 }
-
 .hero h1 {
   font-size: var(--font-scale-3xl);
-  color: var(--color-black);
   margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-
 .hero p {
   font-size: var(--font-scale-lg);
-  color: var(--color-gray-dark);
   margin-bottom: var(--space-xl);
   line-height: 1.6;
+  color: var(--color-accent-light);
+}
+.hero .btn {
+  margin-top: var(--space-md);
 }
 
-.btn {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s, transform 0.15s;
-}
+/* 7. Sections & Cards */
 
-.btn-primary {
-  background: var(--color-gold);
-  color: var(--color-white);
-}
-
-.btn-primary:hover {
-  transform: translateY(-1px);
-  background: #c99f33; /* gently darken */
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
-}
-
-.btn-secondary:hover {
-  background: var(--color-gold);
-  color: var(--color-white);
-}
-
-/* 7. Services / What We Offer */
+/* Services Section */
 .services {
-  background-color: var(--color-white);
+  background-color: var(--color-gray-dark);
   padding: var(--space-2xl) 0;
 }
-
 .services h2 {
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-scale-2xl);
 }
-
 .services p {
   text-align: center;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--color-gray-dark);
+  margin: 0 auto var(--space-xl);
+  color: var(--color-gray-light);
 }
-
 .services .card-grid {
-  margin-top: var(--space-2xl);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 @media (min-width: 640px) {
   .services .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -309,67 +365,61 @@ p {
 }
 
 .services .card {
-  background: var(--color-white);
+  background: var(--color-black);
   border: 1px solid var(--color-gray-medium);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   box-shadow: var(--shadow-light);
-  text-align: left;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-
 .services .card:hover {
-  border-color: var(--color-accent);
+  border-color: var(--color-gold);
   box-shadow: var(--shadow-medium);
 }
-
 .services .card .icon {
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: var(--color-gold);
-  margin-bottom: var(--space-sm);
-}
-
-.services .card h3 {
-  font-size: 1.25rem;
-  color: var(--color-black);
   margin-bottom: var(--space-xs);
 }
-
+.services .card h3 {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
 .services .card p {
-  color: var(--color-gray-dark);
-  margin-bottom: var(--space-md);
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-sm);
 }
-
 .services .card a {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  color: var(--color-gold);
   font-weight: 500;
-  color: var(--color-accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s;
+  transition: color 0.2s;
 }
-
 .services .card a:hover {
-  border-color: var(--color-accent);
+  color: var(--color-gold-dark);
 }
 
-/* 8. Featured Events / Gallery */
+/* Gallery Section */
 .gallery {
-  background-color: var(--color-gray-light);
+  background-color: var(--color-black);
   padding: var(--space-2xl) 0;
 }
-
 .gallery h2 {
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-scale-2xl);
 }
-
 .gallery .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 @media (min-width: 640px) {
   .gallery .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -380,55 +430,51 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 .gallery .item {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-gray-medium);
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .gallery .item img {
   display: block;
   width: 100%;
-  height: 240px;
+  height: 250px;
   object-fit: cover;
-  transition: transform 0.15s;
+  transition: transform 0.2s;
 }
-
 .gallery .item:hover img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
-
 .gallery .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
   color: var(--color-white);
-  padding: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.15s;
+  transition: opacity 0.2s;
+  font-size: var(--font-scale-lg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
 .gallery .item:hover .overlay {
   opacity: 1;
 }
 
-/* 9. Testimonials */
+/* Testimonials Section */
 .testimonials {
-  background-color: var(--color-white);
+  background-color: var(--color-gray-dark);
   padding: var(--space-2xl) 0;
 }
-
 .testimonials h2 {
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-scale-2xl);
 }
-
 .testimonials .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -436,241 +482,217 @@ p {
   max-width: 800px;
   margin: 0 auto;
 }
-
 @media (min-width: 768px) {
   .testimonials .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 .testimonial-card {
-  background: var(--color-gray-light);
+  background: var(--color-black);
   border-radius: var(--radius-md);
   padding: var(--space-md);
   box-shadow: var(--shadow-light);
+  color: var(--color-gray-light);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: box-shadow 0.2s;
 }
-
+.testimonial-card:hover {
+  box-shadow: var(--shadow-medium);
+}
 .testimonial-card .quote-icon {
   font-size: 2rem;
   color: var(--color-gold);
   position: absolute;
-  top: var(--space-md);
-  left: var(--space-md);
+  top: var(--space-sm);
+  left: var(--space-sm);
 }
-
 .testimonial-card p {
   margin-top: var(--space-2xl);
   font-style: italic;
-  color: var(--color-gray-dark);
   line-height: 1.6;
 }
-
 .testimonial-card .author {
   margin-top: var(--space-md);
-  font-weight: 500;
-  color: var(--color-black);
+  font-weight: 600;
   text-align: right;
+  color: var(--color-white);
 }
 
-/* 10. Call-to-Action Banner */
+/* 8. Call-to-Action Banner */
 .cta-banner {
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--color-gold);
+  color: var(--color-black);
   padding: var(--space-2xl) var(--space-md);
   text-align: center;
 }
-
 .cta-banner h2 {
   font-size: var(--font-scale-2xl);
   margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
 .cta-banner p {
   margin-bottom: var(--space-lg);
-  color: var(--color-gray-light);
-  line-height: 1.6;
-}
-
-.cta-banner .btn-primary {
-  background: var(--color-gold);
   color: var(--color-black);
 }
-
+.cta-banner .btn {
+  margin-top: var(--space-sm);
+}
+.cta-banner .btn-primary {
+  background: var(--color-black);
+  color: var(--color-gold);
+}
 .cta-banner .btn-primary:hover {
-  background: #c99f33;
+  background: var(--color-gold-dark);
+  color: var(--color-white);
 }
 
-/* 11. Contact Section */
+/* 9. Contact Section */
 .contact {
-  background-color: var(--color-gray-light);
+  background-color: var(--color-black);
   padding: var(--space-2xl) 0;
 }
-
 .contact h2 {
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-scale-2xl);
 }
-
 .contact .form-container {
   max-width: 600px;
   margin: 0 auto;
-  background: var(--color-white);
+  background: var(--color-gray-dark);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-light);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
-
 .contact label {
-  display: block;
-  margin-bottom: var(--space-xs);
-  color: var(--color-gray-dark);
+  color: var(--color-gray-light);
   font-size: var(--font-scale-sm);
   font-weight: 500;
 }
-
 .contact input,
 .contact textarea {
   width: 100%;
   padding: var(--space-sm);
-  background: var(--color-white);
-  color: var(--color-black);
-  border: 1px solid var(--color-gray-medium);
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-light);
   border-radius: var(--radius-sm);
   font-size: var(--font-base);
-  transition: border-color 0.15s;
+  transition: border-color 0.2s;
 }
-
 .contact input:focus,
 .contact textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
+  border-color: var(--color-gold);
 }
-
 .contact input::placeholder,
 .contact textarea::placeholder {
-  color: var(--color-gray-medium);
+  color: var(--color-gray-light);
+  opacity: 0.8;
 }
-
 .contact button {
   align-self: flex-start;
   padding: var(--space-sm) var(--space-lg);
-  background: var(--color-accent);
-  color: var(--color-white);
-  border: none;
+  background: var(--color-gold);
+  color: var(--color-black);
   border-radius: var(--radius-md);
   font-weight: 600;
-  transition: background 0.15s, transform 0.15s;
+  transition: background 0.2s, transform 0.2s;
 }
-
 .contact button:hover {
   transform: translateY(-1px);
-  background: #333333;
+  background: var(--color-gold-dark);
+  color: var(--color-white);
 }
 
-/* 12. Footer */
+/* 10. Footer */
 .footer {
-  background: var(--color-white);
-  color: var(--color-gray-dark);
+  background: var(--color-gray-dark);
+  color: var(--color-gray-light);
   text-align: center;
   padding: var(--space-md) 0;
   font-size: var(--font-scale-sm);
-  border-top: 1px solid var(--color-gray-medium);
+  border-top: 1px solid var(--color-gray-light);
 }
-
 .footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
-
 .footer p {
-  color: var(--color-gray-dark);
+  margin-bottom: var(--space-xs);
 }
-
 .footer a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.footer a:hover {
   color: var(--color-gold);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: var(--color-gold-dark);
 }
 
-/* 13. Accessibility & Focus States */
+/* 11. Accessibility & Focus States */
 :focus-visible {
   outline: 2px dashed var(--color-gold);
   outline-offset: 4px;
 }
 
-/* 14. Dark Mode (Optional) */
+/* 12. Dark Mode (Optional) */
 .theme-dark body {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-gray-dark);
+  color: var(--color-gray-light);
 }
-
 .theme-dark .navbar {
-  background: var(--color-black);
-  border-bottom: 1px solid #222222;
+  background: var(--color-gray-dark);
+  border-bottom: 1px solid var(--color-black);
 }
-
 .theme-dark .navbar .logo,
 .theme-dark .navbar nav a {
-  color: var(--color-white);
-}
-
-.theme-dark .hero {
-  background-color: #111111;
-}
-
-.theme-dark .services {
-  background-color: #111111;
-}
-
-.theme-dark .services .card {
-  background: #222222;
-  border-color: #333333;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
-.theme-dark .gallery {
-  background-color: #111111;
-}
-
-.theme-dark .testimonial-card {
-  background: #222222;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
-.theme-dark .contact {
-  background-color: #111111;
-}
-
-.theme-dark .contact .form-container {
-  background: #222222;
-  border: 1px solid #333333;
-}
-
-.theme-dark .footer {
-  background: #111111;
-  border-top: 1px solid #222222;
-}
-
-.theme-dark .footer a {
-  color: var(--color-gray-medium);
-}
-
-.theme-dark .footer a:hover {
   color: var(--color-gold);
 }
+.theme-dark .navbar nav a:hover {
+  color: var(--color-gold-dark);
+}
+.theme-dark .hero {
+  background-color: var(--color-gray-dark);
+}
+.theme-dark .services {
+  background-color: var(--color-black);
+}
+.theme-dark .services .card {
+  background: var(--color-gray-dark);
+  border-color: var(--color-black);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+.theme-dark .gallery {
+  background-color: var(--color-gray-dark);
+}
+.theme-dark .testimonial-card {
+  background: var(--color-black);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+.theme-dark .contact {
+  background-color: var(--color-gray-dark);
+}
+.theme-dark .contact .form-container {
+  background: var(--color-black);
+  border: 1px solid var(--color-gray-light);
+}
+.theme-dark .footer {
+  background: var(--color-black);
+  border-top: 1px solid var(--color-gray-light);
+}
+.theme-dark .footer a {
+  color: var(--color-gold);
+}
+.theme-dark .footer a:hover {
+  color: var(--color-gold-dark);
+}
 
-/* End of Aero Luxe Event-Host Theme */
+/* End of Luxe Gold & Black Event-Host Theme */
