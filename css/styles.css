@@ -1,5 +1,5 @@
 /* ===================================================
-   Luxe Gold & Black Event-Host Theme — Refined v2
+   Luxe Gold & Black Event-Host Theme — Refined v3
    =================================================== */
 
 /* 1. Theme Variables */
@@ -8,10 +8,10 @@
   --color-black:        #0a0a0a;   /* Deep matte black */
   --color-white:        #ffffff;   /* Crisp white */
   --color-gray-dark:    #1f1f1f;   /* Dark accents / backgrounds */
-  --color-gray-light:   #2c2c2c;   /* Secondary backgrounds */
-  --color-gold:         #BFA055;   /* Warm, muted luxury gold */
-  --color-gold-dark:    #9e8a42;   /* Darker gold for hover states */
-  --color-accent-light: #f2e8c9;   /* Very pale gold for text highlights */
+  --color-gray-light:   #cccccc;   /* Light gray for readability on black */
+  --color-gold:         #E0C16A;   /* Rich, warm luxury gold */
+  --color-gold-dark:    #C7AD58;   /* Darker gold for hover states */
+  --color-accent-light: #F7F1D6;   /* Very pale gold for text highlights */
 
   /* Typography */
   --font-primary:       'Poppins', sans-serif;
@@ -234,7 +234,7 @@ a.primary-link:hover::after {
   background: none;
   border: none;
   color: var(--color-gold);
-  font-size: 1.75rem; /** 28px **/
+  font-size: 1.75rem; /* 28px */
   cursor: pointer;
 }
 
@@ -707,4 +707,4 @@ a.primary-link:hover::after {
   color: var(--color-gold-dark);
 }
 
-/* End of Luxe Gold & Black Event-Host Theme (Refined v2) */
+/* End of Luxe Gold & Black Event-Host Theme (Refined v3) */
