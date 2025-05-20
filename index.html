@@ -15,19 +15,32 @@
        Navbar
        ========================= -->
 <!-- Navbar -->
-  <header class="bg-[#f4f1e9] shadow fixed w-full z-10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html"
-         class="inline-flex items-center justify-center w-16 h-10 border-2 border-cyan-700 rounded-full text-cyan-700 text-xl font-bold transition hover:bg-cyan-700 hover:text-white">
-        WTF
-      </a>
-      <nav class="space-x-6 flex items-center text-sm font-medium">
-        <a href="pages/overview.html" class="hover:text-cyan-700">Overview</a>
-        <a href="pages/services.html" class="hover:text-cyan-700">Services</a>
-        <a href="pages/contact.html" class="hover:text-cyan-700">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="bg-[#f4f1e9] fixed w-full z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/index.html"
+       class="inline-flex items-center justify-center w-12 h-12 border-2 border-cyan-700 rounded-full text-cyan-700 text-xl font-extrabold transition hover:bg-cyan-700 hover:text-white">
+      WTF
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+      <a href="/pages/overview.html" class="transition hover:text-cyan-700">Overview</a>
+      <a href="/pages/services.html" class="transition hover:text-cyan-700">Services</a>
+      <a href="/pages/contact.html" class="transition hover:text-cyan-700">Contact</a>
+    </nav>
+
+    <!-- Mobile Toggle (optional, if JS added) -->
+    <button class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-cyan-700 hover:bg-cyan-100 focus:outline-none focus:ring-2 focus:ring-cyan-500" aria-label="Toggle navigation">
+      <!-- Icon: Menu -->
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
 
   <!-- =========================
        Hero Section
