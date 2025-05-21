@@ -14,7 +14,7 @@
   --color-accent-light: #F7F1D6;   /* Very pale gold for text highlights */
 
   /* Typography */
-  --font-primary:       'Poppins', sans-serif;
+  --font-primary:       'Tomorrow', sans-serif;
   --font-base:          1rem;       /* 16px */
   --font-scale-sm:      0.875rem;   /* 14px */
   --font-scale-lg:      1.125rem;   /* 18px */
