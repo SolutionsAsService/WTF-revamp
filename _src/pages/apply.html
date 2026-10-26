@@ -1,0 +1,62 @@
+title: Request an Invitation · WTF San Diego
+description: Request a seat at a WTF gathering, nominate a founder, or plan a private event at the venue.
+nav: apply
+---
+    <section class="page-hero">
+      <div class="page-hero-ring" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow reveal">Request an invitation</p>
+        <h1 class="reveal reveal-d1">Pull up a <em>chair.</em></h1>
+        <p class="lede reveal reveal-d2">Tell us about yourself, nominate someone who belongs at the table, or start planning an evening of your own.</p>
+      </div>
+    </section>
+
+    <section class="section" id="nominate">
+      <div class="wrap split">
+        <form id="invite-form" class="form reveal" novalidate>
+          <fieldset class="field field--full" style="border:0;padding:0">
+            <legend class="legend">I'm interested in</legend>
+            <div class="choice">
+              <input type="radio" name="Interest" id="i-join" value="Joining the circle" checked /><label for="i-join">Joining the circle</label>
+              <input type="radio" name="Interest" id="i-guest" value="A guest seat" /><label for="i-guest">A guest seat</label>
+              <input type="radio" name="Interest" id="i-nominate" value="Nominating someone" /><label for="i-nominate">Nominating someone</label>
+              <input type="radio" name="Interest" id="i-hosting" value="Hosting an event" /><label for="i-hosting">Hosting an event</label>
+            </div>
+          </fieldset>
+
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="Name" autocomplete="name" required placeholder="First and last" /></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" autocomplete="email" required placeholder="you@company.com" /></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="Company" autocomplete="organization" placeholder="What you're building" /></div>
+          <div class="field"><label for="f-role">Role</label><input id="f-role" name="Role" autocomplete="organization-title" placeholder="Founder, CEO, partner..." /></div>
+          <div class="field">
+            <label for="f-stage">Stage</label>
+            <select id="f-stage" name="Stage">
+              <option value="">Choose one</option>
+              <option>Early, with first customers</option>
+              <option>Growing, with a team and revenue</option>
+              <option>Scaled or exited</option>
+              <option>Investing</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-ref">Referred by</label><input id="f-ref" name="Referred by" placeholder="A member's name, if any" /></div>
+          <div class="field field--full"><label for="f-msg">What would you bring to the table?</label><textarea id="f-msg" name="Message" rows="4" placeholder="What you're building, what you know, and who you'd love to meet. If you're nominating someone, tell us who and why."></textarea></div>
+
+          <div class="actions">
+            <button class="btn btn--sun" type="submit">Send request <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button>
+            <p class="note">Every request is read by a person. We reply within a week, usually with an invitation to coffee.</p>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="aside-card reveal reveal-d1">
+          <p class="eyebrow">What happens next</p>
+          <ul>
+            <li><strong>We read it</strong>Every request is reviewed personally by a host. No automated filters.</li>
+            <li><strong>We grab coffee</strong>A relaxed half hour so we can learn what you're building and who you'd want to meet.</li>
+            <li><strong>You take a seat</strong>We invite you to the next table that fits, whether that's a Long Table or a Sunset Session.</li>
+            <li><strong>Nominations first</strong>Requests that come with a member's nomination go to the top of the list.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request an Invitation · WTF San Diego</title>
+  <meta name="description" content="Request a seat at a WTF gathering, nominate a founder, or plan a private event at the venue." />
+  <meta name="theme-color" content="#0F1D26" />
+  <meta property="og:title" content="Request an Invitation · WTF San Diego" />
+  <meta property="og:description" content="Request a seat at a WTF gathering, nominate a founder, or plan a private event at the venue." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="WTF, Whitestone Taylored Functions, home">
+        <svg class="brand-mark" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <circle cx="17" cy="17" r="16" stroke="currentColor" stroke-opacity=".45" />
+          <path d="M7 19a10 10 0 0 1 20 0Z" fill="#EFA35C" />
+          <path d="M5 19h24M10 23h14M13 26.5h8" stroke="currentColor" stroke-linecap="round" />
+        </svg>
+        <span>
+          <span class="brand-word">WTF</span>
+          <span class="brand-sub">Whitestone Taylored Functions</span>
+        </span>
+      </a>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="circle.html">The Circle</a>
+        <a href="gatherings.html">Gatherings</a>
+        <a href="venue.html">The Venue</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a class="btn btn--sun" href="apply.html" aria-current="page">Request an invitation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero-ring" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow reveal">Request an invitation</p>
+        <h1 class="reveal reveal-d1">Pull up a <em>chair.</em></h1>
+        <p class="lede reveal reveal-d2">Tell us about yourself, nominate someone who belongs at the table, or start planning an evening of your own.</p>
+      </div>
+    </section>
+
+    <section class="section" id="nominate">
+      <div class="wrap split">
+        <form id="invite-form" class="form reveal" novalidate>
+          <fieldset class="field field--full" style="border:0;padding:0">
+            <legend class="legend">I'm interested in</legend>
+            <div class="choice">
+              <input type="radio" name="Interest" id="i-join" value="Joining the circle" checked /><label for="i-join">Joining the circle</label>
+              <input type="radio" name="Interest" id="i-guest" value="A guest seat" /><label for="i-guest">A guest seat</label>
+              <input type="radio" name="Interest" id="i-nominate" value="Nominating someone" /><label for="i-nominate">Nominating someone</label>
+              <input type="radio" name="Interest" id="i-hosting" value="Hosting an event" /><label for="i-hosting">Hosting an event</label>
+            </div>
+          </fieldset>
+
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="Name" autocomplete="name" required placeholder="First and last" /></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" autocomplete="email" required placeholder="you@company.com" /></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="Company" autocomplete="organization" placeholder="What you're building" /></div>
+          <div class="field"><label for="f-role">Role</label><input id="f-role" name="Role" autocomplete="organization-title" placeholder="Founder, CEO, partner..." /></div>
+          <div class="field">
+            <label for="f-stage">Stage</label>
+            <select id="f-stage" name="Stage">
+              <option value="">Choose one</option>
+              <option>Early, with first customers</option>
+              <option>Growing, with a team and revenue</option>
+              <option>Scaled or exited</option>
+              <option>Investing</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-ref">Referred by</label><input id="f-ref" name="Referred by" placeholder="A member's name, if any" /></div>
+          <div class="field field--full"><label for="f-msg">What would you bring to the table?</label><textarea id="f-msg" name="Message" rows="4" placeholder="What you're building, what you know, and who you'd love to meet. If you're nominating someone, tell us who and why."></textarea></div>
+
+          <div class="actions">
+            <button class="btn btn--sun" type="submit">Send request <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button>
+            <p class="note">Every request is read by a person. We reply within a week, usually with an invitation to coffee.</p>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="aside-card reveal reveal-d1">
+          <p class="eyebrow">What happens next</p>
+          <ul>
+            <li><strong>We read it</strong>Every request is reviewed personally by a host. No automated filters.</li>
+            <li><strong>We grab coffee</strong>A relaxed half hour so we can learn what you're building and who you'd want to meet.</li>
+            <li><strong>You take a seat</strong>We invite you to the next table that fits, whether that's a Long Table or a Sunset Session.</li>
+            <li><strong>Nominations first</strong>Requests that come with a member's nomination go to the top of the list.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="footer-tag">A private circle and venue for the people building Southern California.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="circle.html">The Circle</a></li>
+            <li><a href="gatherings.html">Gatherings</a></li>
+            <li><a href="venue.html">The Venue</a></li>
+            <li><a href="manifesto.html">Manifesto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Join</h4>
+          <ul>
+            <li><a href="apply.html">Request an invitation</a></li>
+            <li><a href="apply.html#nominate">Nominate a founder</a></li>
+            <li><a href="venue.html#host">Host with us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find us</h4>
+          <ul>
+            <li>San Diego, California</li>
+            <li class="muted">Locations shared with guests</li>
+          </ul>
+          <div class="social" style="margin-top:18px">
+            <a href="https://www.instagram.com/tayloredfunctions/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61575761515797" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3Z"/></svg>
+            </a>
+            <a href="https://x.com/johnson_ma3055" aria-label="X" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-word" aria-hidden="true">WTF</div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Whitestone Taylored Functions. San Diego, CA.</span>
+        <span>Where The Founders gather.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
