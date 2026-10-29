@@ -51,7 +51,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .skip {
   position: absolute; left: 16px; top: -60px; z-index: 100;
-  background: var(--sun); color: var(--paper); padding: 10px 16px; border-radius: 8px;
+  background: #B04B28; color: var(--paper); padding: 10px 16px; border-radius: 8px;
 }
 .skip:focus { top: 16px; }
 
@@ -107,8 +107,8 @@ em, .em { font-style: italic; color: var(--sun); }
 }
 .btn svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
 .btn:hover svg { transform: translateX(4px); }
-.btn--sun { background: var(--sun); color: var(--paper); }
-.btn--sun:hover { background: #C0532D; }
+.btn--sun { background: #B04B28; color: var(--paper); }
+.btn--sun:hover { background: #973F21; }
 .btn--ghost { border-color: var(--line); }
 .btn--ghost:hover { border-color: var(--ink); }
 .dark .btn--ghost { border-color: var(--line-inv); color: var(--sand); }
@@ -505,6 +505,7 @@ ol.evening { padding: 0; }
 .footer-top h4 { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted-inv); margin-bottom: 18px; font-weight: 700; }
 .footer-top ul { padding: 0; }
 .footer-top li { list-style: none; margin-bottom: 10px; }
+.site-footer .muted { color: var(--muted-inv); }
 .footer-top a { opacity: .85; transition: opacity .2s, color .2s; }
 .footer-top a:hover { opacity: 1; color: var(--sun-2); }
 .footer-tag { font-family: var(--serif); font-size: 1.5rem; line-height: 1.3; max-width: 22ch; font-weight: 330; }
